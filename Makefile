@@ -1,9 +1,9 @@
 SRC := hello.c
-GCC := gcc
+CC ?= gcc
 OBJ := hello
 
 install: $(OBJ)
-	$(GCC) -o $(SRC) $(OBJ)
+	$(CC) $(SRC) -o $(OBJ)
 
 clean:
-	rm *$(OBJ)
+	rm $(OBJ)
